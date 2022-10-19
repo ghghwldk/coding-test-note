@@ -20,17 +20,17 @@ A, B: A-B 연결 되었다는 의미
 from collections import deque
 
 cityCount, streetCount, distanceCondition, startCity = map(int, input().split())
+# graph 연결 정보 입력
+graph = [[] for _ in range(cityCount + 1)]
+
+for _ in range(streetCount):
+    startPoint, endPoint = map(int, input().split())
+    graph[startPoint].append(endPoint)
 
 # 출력 시 필요한 distance 변수
 distance = [-1] * (cityCount + 1)
 # 출발도시까지의 거리는 0으로 설정
 distance[startCity] = 0
-
-# graph 연결 정보 입력
-graph = [[] for _ in range(streetCount + 1)]
-for i in range(streetCount):
-    startPoint, endPoint = map(int, input().split())
-    graph[startPoint].append(endPoint)
 
 # 너비 우선 탐색(BFS) 수행
 # queue를 start city 기준으로 만든다.
@@ -46,7 +46,7 @@ while queue:
 
 # 최단거리가 K인 모든 도시의 번호를 오름차순으로 출력
 isExist = False
-for i in range(1, cityCount):
+for i in range(1, cityCount+1):
     if distance[i] == distanceCondition:
         print(i)
         isExist = True
