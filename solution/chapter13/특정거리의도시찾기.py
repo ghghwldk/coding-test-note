@@ -24,8 +24,8 @@ cityCount, streetCount, distanceCondition, startCity = map(int, input().split())
 graph = [[] for _ in range(cityCount + 1)]
 
 for _ in range(streetCount):
-    startPoint, endPoint = map(int, input().split())
-    graph[startPoint].append(endPoint)
+  startPoint, endPoint = map(int, input().split())
+  graph[startPoint].append(endPoint)
 
 # 출발도시로부터 특정 노드까지의 거리를 저장하기 위한 Array
 distance = [-1] * (cityCount + 1)
@@ -42,27 +42,27 @@ BFS는 시작점의 인접한 정점들을 차례로 모두 방문하고,
 # BFS는 시작점의 인접한 정점들을 차례로 방문하기 때문에 시작점을 Queue에 넣어 준다.
 queue = deque([startCity])
 while queue:
-    # 출발지와 연결된 노드를 시작점으로 하여 한단계 더 멀리 존재하는 노드를 추적하기 위해
-    # 새로운 출발점을 잡는다.
-    now = queue.popleft()
-    # 새로운 출발점과 연결된 다음 노드를 탐색한다.
-    for nextNode in graph[now]:
-        # 아직 방문하지 않은 도시라면
-        if distance[nextNode] == -1:
-            # 시작으로부터 최단경로 갱신한다.
-            # 이 문제에서는 노드간 거리가 1이므로 +1을 한다.
-            # 노드간 거리가 1이 아니라면, 문제에서 주어진 간선간 거리를 더해주면 된다.
-            distance[nextNode] = distance[now] + 1
-            # 방문했던 정점을 시작점으로 해서 다시 인접한 정점들을 차례로 방문하기 위해
-            # Queue에 방문했던 정점을 추가한다.
-            queue.append(nextNode)
+  # 출발지와 연결된 노드를 시작점으로 하여 한단계 더 멀리 존재하는 노드를 추적하기 위해
+  # 새로운 출발점을 잡는다.
+  now = queue.popleft()
+  # 새로운 출발점과 연결된 다음 노드를 탐색한다.
+  for nextNode in graph[now]:
+    # 아직 방문하지 않은 도시라면
+    if distance[nextNode] == -1:
+      # 시작으로부터 최단경로 갱신한다.
+      # 이 문제에서는 노드간 거리가 1이므로 +1을 한다.
+      # 노드간 거리가 1이 아니라면, 문제에서 주어진 간선간 거리를 더해주면 된다.
+      distance[nextNode] = distance[now] + 1
+      # 방문했던 정점을 시작점으로 해서 다시 인접한 정점들을 차례로 방문하기 위해
+      # Queue에 방문했던 정점을 추가한다.
+      queue.append(nextNode)
 
 # 최단거리가 K인 모든 도시의 번호를 오름차순으로 출력
 isExist = False
 for i in range(1, cityCount+1):
-    if distance[i] == distanceCondition:
-        print(i)
-        isExist = True
+  if distance[i] == distanceCondition:
+    print(i)
+    isExist = True
 
 if isExist == False:
-    print(-1)
+  print(-1)
