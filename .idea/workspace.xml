@@ -2,18 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="48d5b489-c023-49b6-bb67-6aa61aab66a7" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/coding-test-note.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/solution/chapter5/내가출제자/은행대기자관리프로그램.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/solution/chapter5/스택구현예제.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/solution/chapter5/큐구현예제.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/codingTest.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/profiles_settings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/profiles_settings.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/solution/chapter5/4.py" beforeDir="false" afterPath="$PROJECT_DIR$/solution/chapter5/재귀함수의종료조건예제.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/solution/chapter5/5.py" beforeDir="false" afterPath="$PROJECT_DIR$/solution/chapter5/2가지방식으로구현한팩토리얼예제.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/solution/chapter5그래프탐색/인접리스트예제.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/solution/chapter5그래프탐색/인접행렬예제.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
